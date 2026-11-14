@@ -162,7 +162,7 @@ Preserve unrelated working changes and existing conventions. Keep instructions s
 | 4. Retire standalone agent | Remove provider SDKs, API-key requirements, model config, interactive generation loop, and obsolete tests; rewrite README/guide and CI; update product/package names. | Default onboarding is install skill → ask host → inspect artefact; useful prior capabilities survive without an extra LLM account setup. |
 | 5. Expand from real use | Add file-based import, one CMS translator, migration mapping, and further outputs based on project evidence. | Each new capability has real fixtures, mapping/loss reporting, and independently verified output. |
 
-The original plan made phases 1–3 dependencies of retiring the old product. On 2026-10-20 the user authorised the source cutover; retirement is now complete while host behavioural evaluation remains open. New deterministic code and skills can replace the old path incrementally; avoid maintaining two full products after the cutover. The hosted repository is now `headless-company/cmmf-skills`; the npm workspace is also named `cmmf-skills` and remains private. Host behavioural evaluation remains separate from this repository identity change.
+The original plan made phases 1–3 dependencies of retiring the old product. On 2026-10-20 the user authorised the source cutover; retirement is now complete while host behavioural evaluation remains open. New deterministic code and skills can replace the old path incrementally; avoid maintaining two full products after the cutover. The hosted repository is now `cmmf-project/cmmf-skills`; the npm workspace is also named `cmmf-skills` and remains private. Host behavioural evaluation remains separate from this repository identity change.
 
 ## Validation and definition of done
 
@@ -200,5 +200,5 @@ Host documentation was checked on 2026-10-13; discovery paths and packaging guid
 - [Claude Code: Extend Claude with skills](https://code.claude.com/docs/en/skills) — project/personal installation, supporting files, and host-specific versus portable features.
 - [GitHub: Adding agent skills for GitHub Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills) — supported skill directories and skill structure.
 - [Agent Skills specification](https://agentskills.io/specification) — portable metadata and resource layout.
-- [Canonical CMMF spec at inspected revision](https://github.com/headless-company/content-model-master-format/blob/32604441aff09a6dbfe2361e97078af5263fd321/spec/cmmf-v1.2.0.md) — versioned manifest, rich text, relationships, and source intent; read from the local canonical checkout.
+- [Canonical CMMF spec at inspected revision](https://github.com/cmmf-project/content-model-master-format/blob/32604441aff09a6dbfe2361e97078af5263fd321/spec/cmmf-v1.2.0.md) — versioned manifest, rich text, relationships, and source intent; read from the local canonical checkout.
 - Local implementation evidence: `src/types.ts`, `src/cmmf/{repo,source,validate,safety,render}.ts`, `src/agent/{prompt,controller}.ts`, `src/cli.ts`, package metadata, and project documentation.
