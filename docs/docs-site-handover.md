@@ -2,7 +2,7 @@
 
 Prepared: 20 October 2026; version-support guidance updated 22 October 2026. Audience: the documentation implementer, a new modeller, and the technical/content architecture lead evaluating adoption.
 
-**Purpose:** update the CMMF documentation site for the completed move to `headless-company/cmmf-skills` and the replacement of the standalone creation agent with six independently installable skills. This file includes the user-facing documentation substance, site change inventory, operational contracts, and acceptance criteria. It is a handover for site implementation; the website has not been changed by preparing it.
+**Purpose:** update the CMMF documentation site for the completed move to `cmmf-project/cmmf-skills` and the replacement of the standalone creation agent with six independently installable skills. This file includes the user-facing documentation substance, site change inventory, operational contracts, and acceptance criteria. It is a handover for site implementation; the website has not been changed by preparing it.
 
 ## Contents
 
@@ -26,11 +26,11 @@ Prepared: 20 October 2026; version-support guidance updated 22 October 2026. Aud
 
 | Item | Inspected baseline |
 | --- | --- |
-| Skills source | `https://github.com/headless-company/cmmf-skills` |
+| Skills source | `https://github.com/cmmf-project/cmmf-skills` |
 | Skills Git revision | `68ec28d3993eb08298ebf9a896f6a9d51b425bf0` |
 | Skills workspace version | `0.2.0`, private npm workspace |
 | Skills initial worktree | Clean before this handover was added |
-| Docs site | `headless-company/cmmf-docs-web` |
+| Docs site | `cmmf-project/cmmf-docs-web` |
 | Docs Git revision | `2da7154f79046716ef37d4d0fdc2cbb54e72d6ef` |
 | Docs initial worktree | Clean; read-only inspection for this task |
 | Website stack | Astro/Starlight, static output, Cloudflare Pages configuration |
@@ -40,7 +40,7 @@ The local checkouts establish these facts. Remote release availability, producti
 
 Use this immutable source base to reproduce the implementation described here:
 
-`https://github.com/headless-company/cmmf-skills/blob/68ec28d3993eb08298ebf9a896f6a9d51b425bf0/`
+`https://github.com/cmmf-project/cmmf-skills/blob/68ec28d3993eb08298ebf9a896f6a9d51b425bf0/`
 
 The site implementation can use `main` for ordinary repository navigation, but capability/evaluation evidence should identify a full revision and hashes. This handover itself is a new working-tree document based on the revision above.
 
@@ -98,7 +98,7 @@ Keep public copy precise and practitioner-led. Explain the modelling need before
 | Implicit sibling spec repo or `CMMF_SPEC_REPO_PATH` | Retrieved snapshot or explicitly passed source directory | Show source selection and `--cmmf-repo` in tool examples |
 | Terminal clarification/write-confirmation loop | Normal host conversation and scoped authorised edits | Material unresolved modelling decisions need answers; ordinary requested edits have no extra CMMF confirmation gate |
 | Provider-generated change-set calls | Host edits followed by validation and semantic diff | Teach readers to review files, evidence and impact |
-| Old repository links | `headless-company/cmmf-skills` | Update active source, issue, clone, edit and contribution links |
+| Old repository links | `cmmf-project/cmmf-skills` | Update active source, issue, clone, edit and contribution links |
 | Standalone package assumptions | Complete skill folders and suite archive built locally | Do not advertise npm install, npx execution, a marketplace plugin or an unverified hosted archive |
 
 Removed environment variables include `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `CMMF_AGENT_PROVIDER`, `CMMF_AGENT_MODEL` and the old implicit source-path setup. They are no longer used by this project. Do not tell users to delete shared credentials blindly: other tools may use them. Existing private `.env`/`.envrc` files are left untouched.
@@ -170,9 +170,9 @@ Some rows are neighbouring pages to review, rather than confirmed stale URLs. Th
 
 | Old reference | Replacement or treatment |
 | --- | --- |
-| `https://github.com/headless-company/cmmf-creation-agent` | `https://github.com/headless-company/cmmf-skills` in active material |
-| `git@github.com:headless-company/cmmf-creation-agent.git` | `git@github.com:headless-company/cmmf-skills.git` |
-| `https://github.com/headless-company/cmmf-creation-agent.git` | `https://github.com/headless-company/cmmf-skills.git` |
+| `https://github.com/headless-company/cmmf-creation-agent` | `https://github.com/cmmf-project/cmmf-skills` in active material |
+| `git@github.com:headless-company/cmmf-creation-agent.git` | `git@github.com:cmmf-project/cmmf-skills.git` |
+| `https://github.com/headless-company/cmmf-creation-agent.git` | `https://github.com/cmmf-project/cmmf-skills.git` |
 | Old repo `/issues`, `/pulls`, `/tree/...`, `/blob/...`, `/edit/...`, raw file and badge URLs | Change repo slug and verify the target path/revision exists; retain immutable historical references where they provide evidence |
 | Local `cd cmmf-creation-agent` in fresh-clone instructions | `cd cmmf-skills`; existing local folder names may remain |
 | CMMF Creation Agent / `cmmf-agent` as current product | CMMF Skills / `cmmf-tools` as appropriate |
@@ -210,7 +210,7 @@ The package declares npm `>=11.10.0`, while `packageManager` pins `11.11.0`. Use
 Run in a location chosen for the Skills checkout, separate from the model project:
 
 ```sh
-git clone https://github.com/headless-company/cmmf-skills.git
+git clone https://github.com/cmmf-project/cmmf-skills.git
 cd cmmf-skills
 # Select your team's reviewed full Git revision before building.
 node --version
@@ -308,7 +308,7 @@ Resolve once per modelling task. Read the normative spec and relevant docs from 
 
 ### Retrieval and provenance
 
-The canonical remote is `https://github.com/headless-company/content-model-master-format.git`. `source` prefers matching release tags; historical retrieval can inspect actual schema history where tags are absent. For `latest`, it selects the highest suitable numeric release tag or, if none qualifies, the version identified by canonical README/schema at remote HEAD. It does not mix an old spec file with a current schema.
+The canonical remote is `https://github.com/cmmf-project/content-model-master-format.git`. `source` prefers matching release tags; historical retrieval can inspect actual schema history where tags are absent. For `latest`, it selects the highest suitable numeric release tag or, if none qualifies, the version identified by canonical README/schema at remote HEAD. It does not mix an old spec file with a current schema.
 
 Choose a writable cache outside the target model directory. An exact-version request reuses an existing valid cached snapshot. A normal `latest` request refreshes upstream. `--offline` requires an existing pointer/snapshot and cannot establish current freshness of cached latest. Cache namespaces are separated by remote; snapshots are stored by revision. Cached schema/spec bytes are checked against recorded hashes; this is not a complete attestation of every docs file.
 

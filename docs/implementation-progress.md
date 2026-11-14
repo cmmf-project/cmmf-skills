@@ -4,7 +4,7 @@ Updated: 2026-10-20. The repository now uses skills as its sole product workflow
 
 ## Repository identity — 2026-10-20
 
-The skills cutover was committed and pushed as `60689c4`. The GitHub repository has been renamed to [headless-company/cmmf-skills](https://github.com/headless-company/cmmf-skills), its description now identifies the skills and local tools, and this checkout's origin is `git@github.com:headless-company/cmmf-skills.git`. README, installation/migration guidance, and package repository metadata use the new source location. Historical agent names remain only where they explain migration or supported legacy conventions.
+The skills cutover was committed and pushed as `60689c4`. The GitHub repository has been renamed to [cmmf-project/cmmf-skills](https://github.com/cmmf-project/cmmf-skills), its description now identifies the skills and local tools, and this checkout's origin is `git@github.com:cmmf-project/cmmf-skills.git`. README, installation/migration guidance, and package repository metadata use the new source location. Historical agent names remain only where they explain migration or supported legacy conventions.
 
 ## Agent retirement — 2026-10-20
 
