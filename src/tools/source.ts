@@ -7,7 +7,7 @@ import path from "node:path";
 const exec = promisify(execFile);
 const semanticVersion = String.raw`(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-(?:0|[1-9]\d*|\d*[A-Za-z-][0-9A-Za-z-]*)(?:\.(?:0|[1-9]\d*|\d*[A-Za-z-][0-9A-Za-z-]*))*)?`;
 const versionToken = `(?:1|${semanticVersion})`;
-export const canonicalRemote = "https://github.com/headless-company/content-model-master-format.git";
+export const canonicalRemote = "https://github.com/cmmf-project/content-model-master-format.git";
 export interface SourceEvidence {
   root: string;
   version: string;

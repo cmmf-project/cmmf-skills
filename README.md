@@ -1,8 +1,8 @@
 # CMMF Skills
 
-Source repository: [headless-company/cmmf-skills](https://github.com/headless-company/cmmf-skills).
+Source repository: [cmmf-project/cmmf-skills](https://github.com/cmmf-project/cmmf-skills).
 
-Portable skills for discovering, creating, validating, reviewing, documenting, and evolving [Content Model Master Format (CMMF)](https://github.com/headless-company/content-model-master-format) models using your existing coding agent.
+Portable skills for discovering, creating, validating, reviewing, documenting, and evolving [Content Model Master Format (CMMF)](https://github.com/cmmf-project/content-model-master-format) models using your existing coding agent.
 
 Your agent supplies reasoning, authentication, conversation, and file editing. This repository supplies CMMF workflows, canonical source retrieval, and deterministic local tools. No additional LLM API keys are required; your host's normal access requirements and usage limits apply.
 
@@ -24,7 +24,7 @@ Contributors need Node.js 22+ and the pinned npm 11 version in `package.json`.
 For a fresh checkout:
 
 ```sh
-git clone https://github.com/headless-company/cmmf-skills.git
+git clone https://github.com/cmmf-project/cmmf-skills.git
 cd cmmf-skills
 npm ci
 npm run check
@@ -69,7 +69,7 @@ Project conventions remain supported in `cmmf.instructions.{md,txt,yaml,yml}`, `
 
 ## Status and migration
 
-The repository has completed its source cutover from standalone agent to skills. The old `cmmf-agent generate` command, provider adapters, provider configuration, and API-key setup have been removed. See [migration notes](docs/migration.md) for command and API changes. The source repository is now [headless-company/cmmf-skills](https://github.com/headless-company/cmmf-skills). This private npm workspace builds the distributable skill archive; no npm package has been published.
+The repository has completed its source cutover from standalone agent to skills. The old `cmmf-agent generate` command, provider adapters, provider configuration, and API-key setup have been removed. See [migration notes](docs/migration.md) for command and API changes. The source repository is now [cmmf-project/cmmf-skills](https://github.com/cmmf-project/cmmf-skills). This private npm workspace builds the distributable skill archive; no npm package has been published.
 
 Standalone package execution and local tools are tested. Installed-skill discovery and realistic modelling behaviour in each target host remain evaluation work; native plugin packaging and CMS import/translation are not implemented. See [evaluation cases](evals/core-workflows.md) and [implementation progress](docs/implementation-progress.md).
 

@@ -42,6 +42,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/headless-company/cmmf-skills.git"
+    "url": "git+https://github.com/cmmf-project/cmmf-skills.git"
   }
 }
