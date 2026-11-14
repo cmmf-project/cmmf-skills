@@ -1,6 +1,6 @@
 # Resolve the canonical CMMF source
 
-The canonical repository is https://github.com/headless-company/content-model-master-format. Read the normative specification, schema, and relevant documents from one revision. Do not invent CMMF syntax from a CMS schema or an old example.
+The canonical repository is https://github.com/cmmf-project/content-model-master-format. Read the normative specification, schema, and relevant documents from one revision. Do not invent CMMF syntax from a CMS schema or an old example.
 
 ## Choose a version
 

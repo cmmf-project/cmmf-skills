@@ -4,10 +4,10 @@ CMMF Skills is the sole product workflow in this repository. The six skills and 
 
 ## Build and verify
 
-Clone [headless-company/cmmf-skills](https://github.com/headless-company/cmmf-skills) for a fresh checkout:
+Clone [cmmf-project/cmmf-skills](https://github.com/cmmf-project/cmmf-skills) for a fresh checkout:
 
 ```sh
-git clone https://github.com/headless-company/cmmf-skills.git
+git clone https://github.com/cmmf-project/cmmf-skills.git
 cd cmmf-skills
 ```
 
