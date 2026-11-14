@@ -1,3 +1,9 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/brand/assets/skills-horizontal-gradient-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="docs/brand/assets/skills-horizontal-gradient-light.svg">
+  <img alt="CMMF Skills" src="docs/brand/assets/skills-horizontal-gradient-light.svg" width="550">
+</picture>
+
 # CMMF Skills
 
 Source repository: [cmmf-project/cmmf-skills](https://github.com/cmmf-project/cmmf-skills).
